@@ -1,0 +1,7 @@
+<div class="row" *ngFor="let row of board">
+  <div class="col-xs-4" *ngFor="let cell of row">
+    <div class="box" (click)="doTurn(cell)">
+      <app-board-cell [value]="cell.value"></app-board-cell>
+    </div>
+  </div>
+</div>

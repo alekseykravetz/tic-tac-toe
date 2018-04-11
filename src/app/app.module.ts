@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { BoardComponent } from './board/board.component';
+import { BoardCellComponent } from './board-cell/board-cell.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoardComponent,
+    BoardCellComponent
   ],
   imports: [
     BrowserModule,

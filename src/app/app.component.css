@@ -1,0 +1,43 @@
+
+.boardCell {
+    border: 1px solid; 
+    border-color: rgb(162, 10, 233); 
+    background: aqua;
+    width: 100px;
+    height: 100px;
+}
+
+.cell {
+    background: aqua;
+    padding: 20px;
+}
+
+.cellIcon {
+    vertical-align: baseline;
+}
+
+.reverse-row {
+    flex-flow: row-reverse;
+}
+
+.reverse-col {
+    flex-flow: column-reverse;
+}
+
+.rotate-anim:hover {
+    transform: rotate(180deg);
+    transition: all 1s;
+    fill: green;
+    color: green;
+}
+
+.parent {
+    display: flex;
+    height: 300px; /* Or whatever */
+  }
+  
+  .child {
+    width: 100px;  /* Or whatever */
+    height: 100px; /* Or whatever */
+    margin: auto;  /* Magic! */
+  }
