@@ -9,6 +9,7 @@ import { BoardComponent } from './board/board.component';
 import { BoardCellComponent } from './board-cell/board-cell.component';
 import { FormExamplesComponent } from './form-examples/form-examples.component';
 import { BindingExamplesComponent } from './binding-examples/binding-examples.component';
+import { FormValidationExamplesComponent } from './form-validation-examples/form-validation-examples.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BindingExamplesComponent } from './binding-examples/binding-examples.co
     BoardComponent,
     BoardCellComponent,
     FormExamplesComponent,
-    BindingExamplesComponent
+    BindingExamplesComponent,
+    FormValidationExamplesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+<h3>
+  Forms Validation</h3>
+
+<form>
+  <fieldset ngModelGroup="someGroup">
+    <legend>Some Group</legend>
+    <input type="text" name="messageInput" required [(ngModel)]="message">
+    <span>Message is required.</span>
+  </fieldset>
+</form>
