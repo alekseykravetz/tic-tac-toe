@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { BoardCellComponent } from './board-cell/board-cell.component';
+import { FormExamplesComponent } from './form-examples/form-examples.component';
+import { BindingExamplesComponent } from './binding-examples/binding-examples.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    BoardCellComponent
+    BoardCellComponent,
+    FormExamplesComponent,
+    BindingExamplesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],

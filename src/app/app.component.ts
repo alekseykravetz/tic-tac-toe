@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, FormArray, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'app';
-  color = 'blue';
-  board = [
-    [true, false, true],
-    [false, true, false],
-    [true, false, true]
-  ];
+
 }

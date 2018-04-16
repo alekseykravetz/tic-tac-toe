@@ -1,0 +1,53 @@
+
+<h3>formControl</h3>
+<input type="text" [formControl]="firstNameInput1">
+<input type="text" [formControl]="lastNameInput1">
+<br>Full Name: {{firstNameInput1.value}}, {{lastNameInput1.value}}
+
+<br>
+<br>
+
+<h3>formGroup</h3>
+<form [formGroup]="profileGroup">
+
+    <input type="text" formControlName="firstNameInput">
+    <input type="text" formControlName="lastNameInput">
+    <br>Full Name: {{profileGroup.controls['firstNameInput'].value}} {{profileGroup.controls['lastNameInput'].value}}
+
+    <div formArrayName="addressGroups">
+        <div *ngFor="let addressGroup of profileGroup.controls['addressGroups'].controls" [formGroup]="addressGroup">
+            <input type="text" formControlName="streetInput">
+            <input type="text" formControlName="cityInput">
+            <br>Address: {{addressGroup.controls['streetInput'].value}} {{addressGroup.controls['cityInput'].value}}
+        </div>
+        <button type="button" (click)="addAddress()">Add Address</button>
+    </div>
+
+    <div>
+        <button type="button" (click)="saveProfileForm()">Save Profile</button>
+    </div>
+
+</form>
+
+<br/>
+<br/>
+
+<form (ngSubmit)="submitForm()">
+
+    <label for="state-select">State:</label>
+    <select id="state-select" name="stateSelect" [(ngModel)]="testContent.selectedOption">
+        <option value="">Select One...</option>
+        <option *ngFor="let option of selectOptions" [value]="option[0]">{{ option[1] }}</option>
+    </select>
+    <br/>Selected: {{ testContent.selectedOption }}
+
+    <br/>
+    <textarea name="commentsText" [(ngModel)]="testContent.comments"></textarea> 
+
+    <div>
+        <button type="submit">Send Profile</button>
+        <button type="reset">Reset</button>
+        <button (click)="doSomethingElse()" >Do Something Else</button>
+    </div>
+
+</form>
