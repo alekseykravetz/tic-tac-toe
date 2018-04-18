@@ -1,18 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ECellStates } from '../enum-cell-states';
 
 @Component({
   selector: 'app-board-cell',
   templateUrl: './board-cell.component.html',
-  styleUrls: ['./board-cell.component.css']
+  styleUrls: ['./board-cell.component.css'],
 })
-export class BoardCellComponent implements OnInit {
+export class BoardCellComponent {
 
   @Input() value: any;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

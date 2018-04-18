@@ -7,9 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { BoardCellComponent } from './board-cell/board-cell.component';
-import { FormExamplesComponent } from './form-examples/form-examples.component';
-import { BindingExamplesComponent } from './binding-examples/binding-examples.component';
-import { FormValidationExamplesComponent } from './form-validation-examples/form-validation-examples.component';
 
 
 @NgModule({
@@ -17,16 +14,13 @@ import { FormValidationExamplesComponent } from './form-validation-examples/form
     AppComponent,
     BoardComponent,
     BoardCellComponent,
-    FormExamplesComponent,
-    BindingExamplesComponent,
-    FormValidationExamplesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
