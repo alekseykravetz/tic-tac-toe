@@ -8,6 +8,10 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { BoardCellComponent } from './board-cell/board-cell.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +25,9 @@ import { BoardCellComponent } from './board-cell/board-cell.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

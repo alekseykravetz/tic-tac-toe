@@ -1,3 +1,5 @@
+
+Game Id: {{gameId}} Current Player: {{currentPlayer}}
 <div class="row" *ngFor="let row of board">
   <div class="col-xs-4" *ngFor="let cell of row">
     <div class="box" (click)="doTurn(cell)">
@@ -5,3 +7,5 @@
     </div>
   </div>
 </div>
+<button type="button" (click)="createGame()">Create</button>
+<button type="button" (click)="joinGame()">Join</button>
